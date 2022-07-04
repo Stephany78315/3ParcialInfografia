@@ -17,7 +17,7 @@ public class AnimacionPinos : MonoBehaviour
     void Start()
     {
         SonidoJugador = GetComponent<AudioSource>();
-        SonidoJugador.PlayOneShot(Inicio, 10f);
+        SonidoJugador.PlayOneShot(Inicio);
     }
 
     // Update is called once per frame
@@ -26,7 +26,7 @@ public class AnimacionPinos : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             GetComponent<Animation>().Play("Idl");
-            SonidoJugador.PlayOneShot(Inicio, 0.4f);
+            //SonidoJugador.PlayOneShot(Inicio);
         }
     }
 
@@ -37,13 +37,13 @@ public class AnimacionPinos : MonoBehaviour
         if (rand_num == 1)
         {
             GetComponent<Animation>().Play("Chusa");
-            SonidoJugador.PlayOneShot(Chuza, 0.4f);
+            SonidoJugador.PlayOneShot(Chuza);
 
         }
         else
         {
             GetComponent<Animation>().Play("Jump");
-            SonidoJugador.PlayOneShot(Salto,0.4f);
+            SonidoJugador.PlayOneShot(Salto);
         }
         }
     }
